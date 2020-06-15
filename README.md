@@ -43,3 +43,7 @@ if not exist "$(ProjectDir)..\External\include\srt\srt.h" (
 )
 ```
 ![Pre-Built Event](images/pre-built-event.jpg)
+
+# Unix/Linux Operating Systems
+
+I didn't have the chance to test it neither to complete a basic working setup. There are lots of things I don't understand in the **Unix** Makefile. Until all that is clear this part will not work.
