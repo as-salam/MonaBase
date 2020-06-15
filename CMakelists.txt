@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.1)
+project(MonaBase)
+
+if (UNIX)
+	include(unix.cmake)
+endif(UNIX)
+
+if(WIN32)
+	include(windows.cmake)
+endif(WIN32)
+
+option(SRT_ENABLED "Enable if SRT protocol should be integrated in build" 0)
+
+find_package(OpenSSL REQUIRED)
+
+message(STATUS "Current folder : ${CMAKE_CURRENT_SOURCE_DIR}")
+
+set(HEADERS_FOLDER "${CMAKE_CURRENT_SOURCE_DIR}/include")
+set(SOURCE_FOLDER "${CMAKE_CURRENT_SOURCE_DIR}/sources")
+
+message(STATUS "Headers folder : ${HEADERS_FOLDER}")
+message(STATUS "Source folder : ${SOURCE_FOLDER}")
+
+aux_source_directory(${HEADERS_FOLDER} HEADERS)
+aux_source_directory(${SOURCE_FOLDER} SOURCE)
+
+message(STATUS "")
+message(STATUS "Supported features = ${CMAKE_CXX_COMPILE_FEATURES}")
+message(STATUS "")
+
+add_library(MonaBase STATIC ${SOURCE} ${HEADERS})
+
+target_include_directories(MonaBase PRIVATE ${HEADERS_FOLDER})
+target_link_libraries(MonaBase PRIVATE OpenSSL::SSL OpenSSL::Crypto)
+

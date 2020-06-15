@@ -60,7 +60,7 @@ details (or else see http://mozilla.org/MPL/2.0/).
 
 
 #if defined(_WIN64)
-#define OpenSSL(FILE) <openssl64/FILE>
+#define OpenSSL(FILE) <openssl/FILE>
 #else
 #define OpenSSL(FILE) <openssl/FILE>
 #endif

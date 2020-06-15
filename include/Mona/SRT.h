@@ -18,7 +18,7 @@ details (or else see http://mozilla.org/MPL/2.0/).
 #pragma once
 
 #include "Mona/Mona.h"
-#if defined(_MSC_VER) || defined(ENABLE_SRT)
+#if defined(_MSC_VER) && defined(ENABLE_SRT)
 #include "srt/srt.h" // will define SRT_API
 // undefine the conflicting srt logs macro
 #undef LOG_INFO
