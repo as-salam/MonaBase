@@ -1,12 +1,23 @@
 # MonaBase
 CMakelists version of https://github.com/MonaSolutions/MonaServer2/tree/master/MonaBase
 
+# Windows Operating Systems
+
+Read the following for the correct version of your environment.
+
+## Dependencies
+* **vcpkg** see [Installation](https://github.com/microsoft/vcpkg)
+* **Microsoft Visual Studio** see [Installation](https://visualstudio.microsoft.com)
+* **openSSL** installed via **vcpkg**
+
+## How to install openSSL both for x86 and x64 via vcpkg
+* vcpkg install openssl-windows:x86-windows
+* vcpkg install openssl-windows:x64-windows
 
 # Microsoft Visual Studio 2019
 
 This version of MonaBase can be compiled without any problem both as x86 and x64 version.
-
-Note that all dependencies are handled by **vcpkg** integrated with MSVC++ 2019
+Note that all dependencies are handled by **vcpkg** integrated with MSVC++ 2019.
 
 # Microsoft Visual Studio 2017
 
