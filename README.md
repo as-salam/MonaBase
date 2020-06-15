@@ -42,4 +42,4 @@ if not exist "$(ProjectDir)..\External\include\srt\srt.h" (
 	copy /Y "$(ProjectDir)..\External\SRT" "$(ProjectDir)..\External\include\srt\srt.h"
 )
 ```
-![Pre-Built Event](images/pre-built-event.png)
+![Pre-Built Event](/images/pre-built-event.jpg)
