@@ -31,3 +31,15 @@ version and reinstalled the latest one. The only way to compile this is by gener
 # Microsoft Visual Studio 2015
 
 Since the original official version of the project was made with this version there is no need to do anything. 
+
+# SRT Enabled
+
+Since I don't know yet how to implement this header file the CMake way. It will be ignored until I find a way to understand how to translate this **Pre-Build Event** correctly.
+
+```
+if not exist "$(ProjectDir)..\External\include\srt\srt.h" (
+	mkdir "$(ProjectDir)..\External\include\srt\"
+	copy /Y "$(ProjectDir)..\External\SRT" "$(ProjectDir)..\External\include\srt\srt.h"
+)
+```
+![Pre-Built Event](/images/pre-built-event.png)
